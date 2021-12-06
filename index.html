@@ -1,0 +1,301 @@
+<!--
+@license
+Copyright 2020 Google. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="https://pair.withgoogle.com/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://pair.withgoogle.com/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://pair.withgoogle.com/images/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="https://pair.withgoogle.com/images/favicon/safari-pinned-tab.svg" color="#00695c">
+  <link rel="shortcut icon" href="https://pair.withgoogle.com/images/favicon.ico"> -->
+
+  <script>
+    !(function () {
+      var url = window.location.href
+      if (url.slice(-1) != '/' && !url.includes('.html')) window.location = url + '/'
+    })()
+  </script>
+
+  <title>Child Maltreatment Hotline</title>
+  <meta property="og:title" content="Child Maltreatment Hotline">
+  <meta property="og:url" content="https://tradeoff.responsibly.ai">
+
+  
+  <meta name="og:description" content="TBD">
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="style-top.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,700|Roboto:700,500,300' rel='stylesheet'
+    type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+  <div class='header'>
+    <!-- <div class='header-left'> -->
+    <a href='https://learn.responsibly.ai/'>
+      <img src='https://learn.responsibly.ai/assets/img/logo.png' style='width: 150px'></img>
+    </a>
+    <!-- <a href='../'>Explorables</a> -->
+    <!-- </div> -->
+  </div>
+
+  <h1 class='headline'>Child Maltreatment Hotline</h1>
+  <div class="post-summary">TBD</div>
+  
+<link rel="stylesheet" href="third_party/weepeople.css">
+<link rel="stylesheet" href="graph-scroll.css">
+<link rel="stylesheet" href="style.css">
+
+<div id='container' class='container-1'>
+    <div id='graph'></div>
+    <div id='sections'>
+
+
+        <div>
+            <h1>Child Maltreatment Hotline</h1>
+
+            <p>Following the increased volume of child maltreatment cases during the Covid-19 pandemic, and in light of
+                limited
+                resources, a Special Committee seeks input from various stakeholders on the design of an automated
+                decision system (ADS)
+                using machine learning for identifying children at risk of maltreatment.
+                The screening system will focus on calls placed to a hotline, where information of child maltreatment is
+                disclosed to
+                social-worker interns.
+
+
+            <p>Based on the call and on additional information logged in the system or pulled from government and
+                public databases, the
+                system will decide which calls to write off as not requiring any additional action, and which calls to
+                flag as requiring
+                an additional investigation to be performed by a certified social worker.
+
+        </div>
+
+
+        <div>
+            <h3>Ground Truth</h3>
+
+            <p>In our data, about 30% of the children are at risk <wee class='sick'>a</wee>, meaning will be removed
+                from home by the child protection agency within two years from the call. actually have the disease;
+                half of them don't <wee class='well'>b</wee>.
+        </div>
+
+
+        <div>
+            <h3>Model Predictions</h3>
+
+            <p>In a perfect world, only calls about children at risk would be <bg class='sick'>flagged at risk</bg> and
+                requiring an
+                additional investigation to be performed by a certified social worker and only
+                calls about children not at risk would be <bg>flagged at no risk</bg>.
+        </div>
+
+
+        <div>
+            <h3>Model Mistakes</h3>
+
+            <p>But models (and also humans) aren't perfect.
+
+            <p>The model might make a mistake and not flag a child who is at risk <wee class='sick bg-well'>c</wee>.
+
+            <p>Or the opposite: flagging child at risk <wee class='well bg-sick'>f</wee>, although no additional
+                invistigation is required.
+        </div>
+
+
+        <div>
+            <h3>Never Miss Child at Risk...</h3>
+
+            <p>One one hand, we could have the model aggressively call close cases so it rarely
+                misses the child at risk.
+
+            <p>We can evalute this model by counting the number of children who correctly and incorreclty flagget at
+                risk.
+
+            <div class='metrics'></div>
+
+        </div>
+
+
+        <div>
+            <h3>... Or Avoid Unnecessary Investigations?</h3>
+
+            <p>On the other hand, certified soical worker would be allocated to cases where no further inversitagtion is
+                rquired.
+
+            <div class='metrics'></div>
+
+            <p>These issues and trade-offs in model optimization aren't new, but they're brought into focus when we have
+                the ability to fine-tune exactly how aggressively child is flagged for risk.
+
+        </div>
+
+        <div>
+            <h3>Improve Prediction Power</h3>
+
+            <p>Sometimes it is useful to gather additional data to improve the predictive power of the model.
+            <p>But do all data sources contribute equally? What there meaning in terms of rights and values?
+
+            <div class='metrics'></div>
+            <br>
+
+
+            <form>
+                <input type="checkbox" id="child-protection" name="child-protection" value=".2" checked disabled>
+                <label for="child-protection">Previous child protection records</label><br>
+
+                <input type="checkbox" id="bio" name="bio" value=".2" checked disabled>
+                <label for="bio">Family’s demographics records</label><br>
+
+                <input type="checkbox" id="behavioral-health" name="behavioral-health" value=".1" checked disabled>
+                <label for="behavioral-health">Parents’ behavioral health records</label><br>
+
+                <input type="checkbox" id="criminal" name="criminal" value=".1" disabled>
+                <label for="criminal">Parents’ criminal records</label><br>
+
+                <input type="checkbox" id="social-benefits" name="social-benefits" value=".05" disabled>
+                <label for="social-benefits">Parents’ social benefits records</label><br>
+
+                <input type="checkbox" id="employment" name="employment" value=".1" disabled>
+                <label for="employment">Parents’ employment records</label><br>
+
+                <input type="checkbox" id="credit-score" name="credit-score" value=".05" disabled>
+                <label for="credit-score">Parents’ credit score records</label><br>
+
+                <input type="checkbox" id="social-media" name="social-media" value=".25" disabled>
+                <label for="social-media">Family members’ social media profiles</label><br>
+            </form>
+
+
+
+        </div>
+
+        <div>
+            <h3>Putting it all Together</h3>
+
+            <p>Now it is your turn to decide (1) which data sources to use and which to exclude; and (2) how
+                aggressively the model is in flagging a call about child at risk
+
+
+            <div class='metrics'></div>
+
+            <br>
+
+            <form id="datasources">
+                <input type="checkbox" id="child-protection" name="child-protection" value=".2" checked>
+                <label for="child-protection">Previous child protection records</label><br>
+
+                <input type="checkbox" id="bio" name="bio" value=".2">
+                <label for="bio">Family’s demographics records</label><br>
+
+                <input type="checkbox" id="behavioral-health" name="behavioral-health" value=".1">
+                <label for="behavioral-health">Parents’ behavioral health records</label><br>
+
+                <input type="checkbox" id="criminal" name="criminal" value=".1">
+                <label for="criminal">Parents’ criminal records</label><br>
+
+                <input type="checkbox" id="social-benefits" name="social-benefits" value=".05">
+                <label for="social-benefits">Parents’ social benefits records</label><br>
+
+                <input type="checkbox" id="employment" name="employment" value=".1">
+                <label for="employment">Parents’ employment records</label><br>
+
+                <input type="checkbox" id="credit-score" name="credit-score" value=".05">
+                <label for="credit-score">Parents’ credit score records</label><br>
+
+                <input type="checkbox" id="social-media" name="social-media" value=".25">
+                <label for="social-media">Family members’ social media profiles</label><br>
+            </form>
+
+            <br>
+            <div class='slider threshold'></div>
+            <i id='adjust-text'> Try adjusting how aggressive the model is in flagging a call about child at
+                risk</i>
+        </div>
+
+
+
+    </div>
+</div>
+</div>
+</div>
+
+<br><br><br><br><br><br>
+
+<h3>Credits</h3>
+
+<p><a href="https://learn.responsibly.ai/">Responsible AI, Law, Ethics & Society</a>
+
+<p>Adopted from <a href="https://pair.withgoogle.com/explorables/">AI Explorable</a> by <a
+        href="https://pair.withgoogle.com/">PAIR</a>, made by <a href="https://roadtolarissa.com/">Adam Pearce</a>,
+    licensed <a href="https://github.com/PAIR-code/ai-explorables">Apache License 2.0</a>.
+
+
+<p>Silhouettes from <a href='https://github.com/propublica/weepeople'>ProPublica's Wee People</a>.
+
+
+
+
+    <script src='third_party/seedrandom.min.js'></script>
+    <script src='third_party/d3_.js'></script>
+    <script src='third_party/swoopy-drag.js'></script>
+    <script src='third_party/topojson-server.js'></script>
+    <script src='third_party/topojson-client.js'></script>
+    <script src='third_party/misc.js'></script>
+    <script src='annotations.js'></script>
+
+    <script src='students.js'></script>
+    <script src='sel.js'></script>
+    <script src='slider.js'></script>
+    <script src='mini.js'></script>
+    <script src='metrics.js'></script>
+    <script src='slides.js'></script>
+    <script src='data-sources.js'></script>
+    <script src='gs.js'></script>
+    <script src='init.js'></script>
+
+    <link rel="stylesheet" href="base-rate/style.css">
+    <script src='base-rate/script.js'></script>
+
+
+    <!-- <script src='third_party/recirc.js'></script> -->
+</body>
+
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138505774-1"></script>
+<script>
+  if (window.location.origin === 'https://pair.withgoogle.com') {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-138505774-1');
+  }
+</script> -->
+
+
+</html>

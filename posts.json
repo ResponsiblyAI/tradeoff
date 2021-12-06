@@ -1,0 +1,64 @@
+[
+  {
+    "template": "post.html",
+    "title": "How randomized response can help collect sensitive information responsibly",
+    "shorttitle": "Collecting Sensitive Information",
+    "summary": "Giant datasets are revealing new patterns in <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5070532/'>cancer</a>, <a href='https://opportunityinsights.org/national_trends/'>income inequality</a> and other important areas. However, the widespread availability of fast computers that can cross reference public data is making it harder to collect private information without inadvertently violating people's privacy. Modern randomization techniques can help preserve anonymity. ",
+    "socialsummary": "The availability of giant datasets and faster computers is making it harder to collect and study private information without inadvertently violating people's privacy.",
+    "shareimg": "https://pair.withgoogle.com/explorables/images/anonymization.png",
+    "permalink": "/anonymization/",
+    "date": "2020-09-01"
+  },
+  {
+    "template": "post.html",
+    "title": "Hidden Bias",
+    "summary": "Models trained on real-world data can encode real-world bias. Hiding information about protected classes doesn't always fix things — sometimes it can even hurt.",
+    "permalink": "/hidden-bias/",
+    "shareimg": "https://pair.withgoogle.com/explorables/images/hidden-bias.png",
+    "date": "2020-05-01"
+  },
+  {
+    "permalink": "/measuring-fairness/",
+    "template": "post.html",
+    "title": "Measuring Fairness ",
+    "summary": "There are multiple ways to measure accuracy. No matter how we build our model, accuracy across these measures will vary when applied to different groups of people.",
+    "summaryalt": "There are multiple ways to assess machine learning models, such as its overall accuracy. Another important perspective to consider is the fairness of the model with respect to different groups of people or different contexts of use.",
+    "shareimg": "https://pair.withgoogle.com/explorables/images/measuring-fairness.png",
+    "date": "2021-05-01"
+  },
+  {
+    "template": "post.html",
+    "title": "Why Some Models Leak Data",
+    "shorttitle": "Why Some Models Leak Data",
+    "summary": "Machine learning models use large amounts of data, some of which can be sensitive. If they're not trained correctly, sometimes that data is inadvertently revealed.",
+    "socialsummary": "Machine learning models use large amounts of data, some of which can be sensitive. If they're not trained correctly, sometimes that data is inadvertently revealed.",
+    "permalink": "/data-leak/",
+    "shareimg": "https://pair.withgoogle.com/explorables/images/model-inversion.png",
+    "date": "2020-12-01"
+  },
+  {
+    "template": "post.html",
+    "title": "Measuring Diversity",
+    "titlex": "Diversity and Inclusion Metrics",
+    "summary": "Search results that reflect historic inequities can amplify stereotypes and perpetuate under-representation. Carefully measuring diversity in data sets can help.",
+    "shareimg": "https://pair.withgoogle.com/explorables/images/measuring-diversity.png",
+    "permalink": "/measuring-diversity/",
+    "date": "2021-03-01"
+  },
+  {
+    "template": "post.html",
+    "title": "What Have Language Models Learned?",
+    "summary": "By asking language models to fill in the blank, we can probe their understanding of the world.",
+    "shareimg": "https://pair.withgoogle.com/explorables/images/fill-in-the-blank.png",
+    "shareimgabstract": "https://pair.withgoogle.com/explorables/images/fill-in-the-blank-abstract.png",
+    "permalink": "/fill-in-the-blank/",
+    "date": "2021-07-28"
+  },
+  {
+    "permalink": "/child-maltreatment-hotline/",
+    "template": "post-ours.html",
+    "title": "Child Maltreatment Hotline",
+    "summary": "TBD",
+    "date": "2021-12-04"
+  }
+]

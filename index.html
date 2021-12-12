@@ -45,7 +45,7 @@ limitations under the License.
   
   
 
-  <link rel="stylesheet" type="text/css" href="style-top.css">
+  <link rel="stylesheet" type="text/css" href="../style.css">
 
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,700|Roboto:700,500,300' rel='stylesheet'
     type='text/css'>
@@ -67,7 +67,7 @@ limitations under the License.
   <h1 class='headline'>Child Maltreatment Hotline</h1>
   <div class="post-summary">TBD</div>
   
-<link rel="stylesheet" href="third_party/weepeople.css">
+<link rel="stylesheet" href="../third_party/weepeople.css">
 <link rel="stylesheet" href="graph-scroll.css">
 <link rel="stylesheet" href="style.css">
 
@@ -81,19 +81,19 @@ limitations under the License.
 
             <p>Following the increased volume of child maltreatment cases during the Covid-19 pandemic, and in light of
                 limited
-                resources, a Special Committee seeks input from various stakeholders on the design of an automated
-                decision system (ADS)
-                using machine learning for identifying children at risk of maltreatment.
-                The screening system will focus on calls placed to a hotline, where information of child maltreatment is
-                disclosed to
-                social-worker interns.
+                resources, a Special Committee seeks input from various stakeholders on the design of an Automated
+                Decision System (ADS)
+                using machine learning for identifying children at risk of maltreatment. The screening system will focus
+                on calls placed
+                to a hotline, where information of child maltreatment is disclosed to social-worker interns.
 
 
-            <p>Based on the call and on additional information logged in the system or pulled from government and
-                public databases, the
-                system will decide which calls to write off as not requiring any additional action, and which calls to
-                flag as requiring
-                an additional investigation to be performed by a certified social worker.
+            <p>Based on the call and on additional information logged in the system or pulled from government and public
+                databases, the
+                system will automatically decide which calls to write off as not requiring any additional action, and
+                which calls to
+                flag as requiring an additional investigation to be performed by a certified social worker.
+
 
         </div>
 
@@ -101,19 +101,22 @@ limitations under the License.
         <div>
             <h3>Ground Truth</h3>
 
-            <p>In our data, about 30% of the children are at risk <wee class='sick'>a</wee>, meaning will be removed
-                from home by the child protection agency within two years from the call. actually have the disease;
-                half of them don't <wee class='well'>b</wee>.
+            <p>In our data, 30% of the children are at risk <wee class='sick'>a</wee>.Children at risk are those that
+                would be removed from home by the child protection agency within two years from the
+                call. The other 70% of them are not at risk <wee class='well'>b</wee>.
         </div>
 
 
         <div>
             <h3>Model Predictions</h3>
 
-            <p>In a perfect world, only calls about children at risk would be <bg class='sick'>flagged at risk</bg> and
-                requiring an
-                additional investigation to be performed by a certified social worker and only
-                calls about children not at risk would be <bg>flagged at no risk</bg>.
+
+            <p>In a perfect world, only calls regarding children at risk would be <bg class='sick'></bg>flagged as ones
+                requiring an additional
+                investigation</bg>, and only calls regarding children that are actually not at risk would be <bg>flagged
+                    as not requiring an
+                    additional investigation</bg>.
+
         </div>
 
 
@@ -124,19 +127,21 @@ limitations under the License.
 
             <p>The model might make a mistake and not flag a child who is at risk <wee class='sick bg-well'>c</wee>.
 
-            <p>Or the opposite: flagging child at risk <wee class='well bg-sick'>f</wee>, although no additional
-                invistigation is required.
+            <p>Or the opposite: the model might flag a child as one at risk <wee class='well bg-sick'>f</wee>, while in
+                fact they are not at risk and no additional investigation is required.
         </div>
 
 
         <div>
             <h3>Never Miss Child at Risk...</h3>
 
-            <p>One one hand, we could have the model aggressively call close cases so it rarely
-                misses the child at risk.
+            <p>One approach would be to have the model flag children at risk “aggressively”, such that close calls would
+                be decided as
+                “at risk”, and so the model will rarely miss a child at risk.
 
-            <p>We can evalute this model by counting the number of children who correctly and incorreclty flagget at
-                risk.
+            <p>We can evaluate this model by counting the number of children who are correctly and incorrectly flagged
+                as children at
+                risk:
 
             <div class='metrics'></div>
 
@@ -146,13 +151,17 @@ limitations under the License.
         <div>
             <h3>... Or Avoid Unnecessary Investigations?</h3>
 
-            <p>On the other hand, certified soical worker would be allocated to cases where no further inversitagtion is
-                rquired.
+            <p>On the other hand, certified social workers would be allocated to cases where no further investigation is
+                required,
+                resulting in wasting public resources and also in unnecessarily burdening families of children who are
+                not truly at
+                risk.
 
             <div class='metrics'></div>
 
             <p>These issues and trade-offs in model optimization aren't new, but they're brought into focus when we have
-                the ability to fine-tune exactly how aggressively child is flagged for risk.
+                the ability to
+                fine-tune exactly how aggressively the model works when flagging children as being at risk or not.
 
         </div>
 
@@ -160,7 +169,8 @@ limitations under the License.
             <h3>Improve Prediction Power</h3>
 
             <p>Sometimes it is useful to gather additional data to improve the predictive power of the model.
-            <p>But do all data sources contribute equally? What there meaning in terms of rights and values?
+            <p>But do all data sources contribute equally? What are the meanings and consequences in terms of rights and
+                values?
 
             <div class='metrics'></div>
             <br>
@@ -200,7 +210,8 @@ limitations under the License.
             <h3>Putting it all Together</h3>
 
             <p>Now it is your turn to decide (1) which data sources to use and which to exclude; and (2) how
-                aggressively the model is in flagging a call about child at risk
+                aggressively the model is
+                when flagging a call about a child at risk.
 
 
             <div class='metrics'></div>
@@ -262,12 +273,12 @@ limitations under the License.
 
 
 
-    <script src='third_party/seedrandom.min.js'></script>
-    <script src='third_party/d3_.js'></script>
-    <script src='third_party/swoopy-drag.js'></script>
-    <script src='third_party/topojson-server.js'></script>
-    <script src='third_party/topojson-client.js'></script>
-    <script src='third_party/misc.js'></script>
+    <script src='../third_party/seedrandom.min.js'></script>
+    <script src='../third_party/d3_.js'></script>
+    <script src='../third_party/swoopy-drag.js'></script>
+    <script src='../third_party/topojson-server.js'></script>
+    <script src='../third_party/topojson-client.js'></script>
+    <script src='../third_party/misc.js'></script>
     <script src='annotations.js'></script>
 
     <script src='students.js'></script>
@@ -280,11 +291,11 @@ limitations under the License.
     <script src='gs.js'></script>
     <script src='init.js'></script>
 
-    <link rel="stylesheet" href="base-rate/style.css">
-    <script src='base-rate/script.js'></script>
+    <link rel="stylesheet" href="../base-rate/style.css">
+    <script src='../base-rate/script.js'></script>
 
 
-    <!-- <script src='third_party/recirc.js'></script> -->
+    <script src='../third_party/recirc.js'></script>
 </body>
 
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138505774-1"></script>

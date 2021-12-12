@@ -38,17 +38,17 @@ window.makeSel = function () {
   var botAxis = c.svg.append('g').translate(c.width + 150, 1)
   var truthAxis = botAxis.append('g.axis').translate([0, 0])
 
-  truthAxis.append('text').text('Truth')
+  truthAxis.append('text').text('Truth (removed after investigation)')
     .at({ textAnchor: 'middle', fontWeight: 500, x: s * 2.65 })
 
   truthAxis.append('g').translate([45, 22])
-    .append('text').text('Sick').parent()
+    .append('text').text('Yes').parent()
     .append('text.weepeople').text('k')
     .at({ fontSize: 34, x: 22, y: 5 })
     .st({ fill: colors.sick })
 
   truthAxis.append('g').translate([95, 22])
-    .append('text').text('Well').parent()
+    .append('text').text('No').parent()
     .append('text.weepeople').text('d')
     .at({ fontSize: 34, fill: colors.well, x: 22, y: 5 })
     .st({ fill: colors.well })
@@ -56,16 +56,16 @@ window.makeSel = function () {
 
   var mlAxis = botAxis.append('g.axis').translate([220, 0])
 
-  mlAxis.append('text').text('ML Prediction')
+  mlAxis.append('text').text('ML Prediction (flagged at riskœ)')
     .at({ textAnchor: 'middle', fontWeight: 500, x: s * 2.8 })
 
   mlAxis.append('g').translate([35, 22])
-    .append('text').text('Sick').parent()
+    .append('text').text('Yes').parent()
     .append('rect')
     .at({ width: s * .7, height: s * .7, fill: lcolors.sick, x: 28, y: -17 })
 
   mlAxis.append('g').translate([100, 22])
-    .append('text').text('Well').parent()
+    .append('text').text('No').parent()
     .append('rect')
     .at({ width: s * .7, height: s * .7, fill: lcolors.well, x: 28, y: -17 })
 

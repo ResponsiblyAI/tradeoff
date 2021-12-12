@@ -3,7 +3,6 @@ window.makeMetrics = () => {
 
     function addMetrics() {
         var metricsSel = d3.select(this)
-        console.log(this)
 
         var tp = {}
         var fp = {}

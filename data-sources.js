@@ -4,7 +4,7 @@ window.calcFactor = function () {
     dataSources.each(function (d, i) {
         source = d3.select(this)
         if (source.prop("checked")) {
-            factor += parseFloat(source.attr("value"))
+            factor += DATA_SOURCE_FACTROS[source.attr("name")]
         }
     })
     return factor

@@ -17,12 +17,11 @@ Math.clip = function (number, min, max) {
   return Math.max(min, Math.min(number, max));
 };
 
-window.BASE_MEAN = .2
 
 window.makeStudents = function () {
   var seed = new Math.seedrandom('he4a15')
   // var rand = d3.randomUniform.source(seed)(0, 1)
-  var rand = d3.randomNormal.source(seed)(window.BASE_MEAN, .2)
+  var rand = d3.randomNormal.source(seed)(BASE_MEAN, BASE_STD)
   var letters = 'abcdefgijlmnopqrsuvwxyz'
   letters = (letters + letters.toUpperCase()).split('')
 

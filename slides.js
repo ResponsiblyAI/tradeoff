@@ -58,28 +58,28 @@ window.makeSlides = function () {
 
     // Never Miss Child at Risk...
     {
-      threshold: .1,
+      threshold: .15,
       animateThreshold: true,
-      factor: .2,
+      factor: HIGH_IMPACT,
     },
 
     // ... Or Avoid Unnecessary Investigations?
     {
-      threshold: .3,
+      threshold: .4,
       animateThreshold: true,
-      factor: .2,
+      factor: HIGH_IMPACT,
     },
 
     // ... Improve Prediction Power
     {
-      threshold: .3,
+      threshold: .4,
       animateThreshold: true,
-      factor: .5,
+      factor: 3 * HIGH_IMPACT,
     },
 
     // Putting it all Together
     {
-      threshold: .3,
+      threshold: .4,
       animateThreshold: true,
       factor: window.calcFactor(),
     },

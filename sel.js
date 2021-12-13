@@ -56,7 +56,7 @@ window.makeSel = function () {
 
   var mlAxis = botAxis.append('g.axis').translate([220, 0])
 
-  mlAxis.append('text').text('ML Prediction (flagged at riskœ)')
+  mlAxis.append('text').text('ML Prediction (flagged at risk)')
     .at({ textAnchor: 'middle', fontWeight: 500, x: s * 2.8 })
 
   mlAxis.append('g').translate([35, 22])

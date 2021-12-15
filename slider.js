@@ -75,7 +75,7 @@ window.makeSlider = function () {
     var handleSel = svg.append('g.threshold-handle')
     handleSel.append('text.cursor')
       .text('▲')
-      .at({ textAnchor: 'middle', fontSize: 10, y: height, dy: '.8em' })
+      .at({ textAnchor: 'middle', fontSize: 25, y: height, dy: '.8em' })
     handleSel.append('circle')
       .at({ cy: height, r: 30, fill: 'rgba(0,0,0,0)' })
 

@@ -220,29 +220,63 @@ limitations under the License.
             <br>
 
             <form id="datasources">
+
                 <input type="checkbox" id="child-protection" name="child-protection" value=".2" checked>
-                <label for="child-protection">Previous child protection records</label><br>
+                <label for="child-protection">Previous child protection records</label>
+                <span data-tooltip="Previous calls to hotline, investigation and reports on each family member.">
+                    <i class="fa-solid fa-circle-info icon"></i>
+                </span>
+                <br>
 
                 <input type="checkbox" id="bio" name="bio" value=".2">
-                <label for="bio">Family’s demographics records</label><br>
+                <label for="bio">Family’s demographics records</label>
+                <span data-tooltip="Age, race, ethnicity, gender, marital status, number of children and address.">
+                    <i class="fa-solid fa-circle-info icon"></i>
+                </span>
+                <br>
 
                 <input type="checkbox" id="behavioral-health" name="behavioral-health" value=".1">
-                <label for="behavioral-health">Parents’ behavioral health records</label><br>
+                <label for="behavioral-health">Parents’ behavioral health records</label>
+                <span data-tooltip="Previous calls to the hotline, investigation and reports on each family member.">
+                    <i class="fa-solid fa-circle-info icon"></i>
+                </span>
+                <br>
 
                 <input type="checkbox" id="criminal" name="criminal" value=".1">
-                <label for="criminal">Parents’ criminal records</label><br>
+                <label for="criminal">Parents’ criminal records</label>
+                <span data-tooltip="Arrests, criminal charges and the disposition of those charges fron all administrative levels.">
+                    <i class="fa-solid fa-circle-info icon"></i>
+                </span>
+                <br>
 
                 <input type="checkbox" id="social-benefits" name="social-benefits" value=".05">
-                <label for="social-benefits">Parents’ social benefits records</label><br>
+                <label for="social-benefits">Parents’ social benefits records</label>
+                <span data-tooltip="Past and current support from government  social welfare services and agencies.">
+                    <i class="fa-solid fa-circle-info icon"></i>
+                </span>
+                <br>
 
                 <input type="checkbox" id="employment" name="employment" value=".1">
-                <label for="employment">Parents’ employment records</label><br>
+                <label for="employment">Parents’ employment records</label>
+                <span data-tooltip="Past and current employment, including start and end dates, employer name and job title.">
+                    <i class="fa-solid fa-circle-info icon"></i>
+                </span>
+                <br>
 
                 <input type="checkbox" id="credit-score" name="credit-score" value=".05">
-                <label for="credit-score">Parents’ credit score records</label><br>
+                <label for="credit-score">Parents’ credit score records</label>
+                <span data-tooltip="Credit scores, credit accounts, payment hisotry, account balances, bankruptcies. All from the last 7 years.">
+                    <i class="fa-solid fa-circle-info icon"></i>
+                </span>
+                <br>
 
                 <input type="checkbox" id="social-media" name="social-media" value=".25">
-                <label for="social-media">Family members’ social media profiles</label><br>
+                <label for="social-media">Family members’ social media profiles</label>
+                <span data-tooltip="Social media handles and publicly available information in all social media platforms.">
+                    <i class="fa-solid fa-circle-info icon"></i>
+                </span>
+                <br>
+
             </form>
 
             <br>
@@ -296,6 +330,8 @@ limitations under the License.
     <link rel="stylesheet" href="./base-rate/style.css">
     <script src='./base-rate/script.js'></script>
 
+    <link rel="stylesheet" type="text/css" href="./tooltip.css">
+    <script src="https://kit.fontawesome.com/994e94b7a6.js" crossorigin="anonymous"></script>
 
     <!-- <script src='../third_party/recirc.js'></script> -->
 </body>

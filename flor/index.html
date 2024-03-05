@@ -84,7 +84,7 @@ limitations under the License.
             <p>Having received numerous complaints that its system is making ‘bad decisions’ in the Oceana region, FLOR revealed a surge in employee merchandise theft in that region that was distorting inventory predictions.
                FLOR designed  an Automated Decision System (ADS) using machine learning for identifying employees at higher risk of stealing. 
 
-            <p>Based potential sources of information, the system will automatically decide which employees should be subject of a face to face investigation, to determine the likelihood that they are in fact engaging in larceny.
+            <p>Based on different sources of information, the system can automatically decide which employees should be subject of a face to face investigation, to determine the likelihood that they are in fact engaging in larceny.
 
         </div>
 
@@ -93,7 +93,7 @@ limitations under the License.
             <h3>Ground Truth</h3>
 
             <p>Our assumption is that 30% of the employees in Oceania have either stolen merchandize or have attempted to steal it <wee class='sick'>a</wee>.
-                The other 70% of them did not <wee class='well'>b</wee>.
+                The other 70% did not <wee class='well'>b</wee>.
  
         </div>
 
@@ -101,9 +101,9 @@ limitations under the License.
         <div>
             <h3>Model Predictions</h3>
 
-            <p>In a perfect world, employees who commit or tried to commit larceny <bg class='sick'>flagged as ones
-                    requiring an additional
-                    investigation</bg>, and only employees who are are not at risk of stealing would be <bg>
+            <p>In a perfect world, employees who commit or tried to commit larceny are <bg class='sick'>flagged as ones
+                    requiring additional
+                    investigation</bg>, and only employees who are not at risk of stealing would be <bg>
                     flagged
                     as not requiring an
                     additional investigation</bg>.
@@ -119,7 +119,7 @@ limitations under the License.
             <p>The model might make a mistake and not flag an employee who is at risk being a thief<wee class='sick bg-well'>c</wee>.
 
             <p>Or the opposite: the model might flag an employee as one at risk <wee class='well bg-sick'>f</wee>, while in
-                fact they have not and have not attempted stealing and and no additional investigation is required.
+                fact they have never stolen attempted stealing and thus no additional investigation is required.
         </div>
 
 
@@ -128,7 +128,7 @@ limitations under the License.
 
             <p>One approach would be to have the model flag employees at risk of being thiefs “aggressively”, such that close calls would
                 be decided as
-                “at risk”, and so the model will rarely miss an employeeat at risk of being thief.
+                “at risk”, and so the model will rarely miss an employeeat at risk of being a thief.
 
             <p>We can evaluate this model by counting the number of employees who are correctly and incorrectly flagged
                 as employees at
@@ -144,7 +144,7 @@ limitations under the License.
 
             <p>On the other hand, company’s resources would be allocated to cases where no further investigation is
                 required,
-                resulting in wasting money, maybe more importantly, in unnecessarily burdening employees who are
+                resulting in wasting money. Maybe more importantly, it might burden employees who are
                 not truly at
                 risk.
 
@@ -202,7 +202,7 @@ limitations under the License.
 
             <p>Now it is your turn to decide (1) which data sources to use and which to exclude; and (2) how
                 aggressively the model is
-                when flagging a call about an employees at risk of stealing.
+                when flagging an employee at risk of stealing.
 
 
             <div class='metrics'></div>
@@ -306,7 +306,7 @@ limitations under the License.
     <script src='/annotations.js'></script>
 
     <script src='/students.js'></script>
-    <script src='/sel.js'></script>
+    <script src='/flor/sel.js'></script>
     <script src='/slider.js'></script>
     <script src='/mini.js'></script>
     <script src='/metrics.js'></script>

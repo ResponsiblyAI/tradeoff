@@ -38,7 +38,7 @@ window.makeSel = function () {
   var botAxis = c.svg.append('g').translate(c.width + 150, 1)
   var truthAxis = botAxis.append('g.axis').translate([0, 0])
 
-  truthAxis.append('text').text('Truth (stole or attempted to steal))')
+  truthAxis.append('text').text('Truth (stole or attempted to steal)')
     .at({ textAnchor: 'middle', fontWeight: 500, x: s * 2.65 })
 
   truthAxis.append('g').translate([45, 22])
